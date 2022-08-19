@@ -1,0 +1,15 @@
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\bin\Debug\net6.0\Ecuacion.exe
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\bin\Debug\net6.0\Ecuacion.deps.json
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\bin\Debug\net6.0\Ecuacion.runtimeconfig.json
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\bin\Debug\net6.0\Ecuacion.dll
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\bin\Debug\net6.0\Ecuacion.pdb
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\obj\Debug\net6.0\Ecuacion.csproj.AssemblyReference.cache
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\obj\Debug\net6.0\Ecuacion.GeneratedMSBuildEditorConfig.editorconfig
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\obj\Debug\net6.0\Ecuacion.AssemblyInfoInputs.cache
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\obj\Debug\net6.0\Ecuacion.AssemblyInfo.cs
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\obj\Debug\net6.0\Ecuacion.csproj.CoreCompileInputs.cache
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\obj\Debug\net6.0\Ecuacion.dll
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\obj\Debug\net6.0\refint\Ecuacion.dll
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\obj\Debug\net6.0\Ecuacion.pdb
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\obj\Debug\net6.0\Ecuacion.genruntimeconfig.cache
+D:\_repository\Laboratorio_global\Ecuacion\Ecuacion\obj\Debug\net6.0\ref\Ecuacion.dll
