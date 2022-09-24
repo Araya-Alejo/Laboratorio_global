@@ -8,45 +8,72 @@ internal class Program
     private static void Main(string[] args)
     {
 
-        string input;
-        input = validate_equation();
-        input = clean_equation(input);
-        char[] input_char = input.ToArray();
-        validate_structure(input_char);
+        List<string> inputString = input_equation().Split(" ").ToList();
+        inputString.ForEach(i => Console.Write(i + ", "));
+
+
+        //inputString = solve_equation(inputString);
 
         //foreach (char i in input_char) Console.WriteLine(i);
 
 
     }
 
-    private static int solve_equation(string aux)
-    {
-        return 1;
-    }
-
-    private static string clean_equation(string input)
+    private static string clean_input(string input)
     {
         input = input.Trim();
         input = input.Replace(" ", "");
         return input;
     }
 
-    private static string validate_equation()
+    private static string input_equation()
     {
-        string input = "2-(9-3)";
-        do
-        {
-            /*Console.WriteLine("Enter a equation");
-            input = Console.ReadLine();*/
+        Console.WriteLine("\nEnter a equation");
+        string input = clean_input(Console.ReadLine());
 
-        } while (!Regex.IsMatch(input, pattern: @"^[0-9+/*() -]+$"));
+        if (!Regex.IsMatch(input, pattern: @"^[0-9+/*() -]+$")) { Console.WriteLine("Syntax Error --> ^[0-9+/*() -]+$"); input_equation(); }
+
+        //if (!Regex.IsMatch(input, pattern: @"^\)+-*/|[-*=+/\(]$")) { Console.WriteLine("Syntax Error --> ^\\)+-*/|[-*=+/\\(]$"); input_equation(); }
+
+        if (Regex.IsMatch(input, pattern: @"([*]){2,3}")) { Console.WriteLine("Syntax Error --> ([*]){2,3}"); input_equation(); }
+        if (Regex.IsMatch(input, pattern: @"([-]){2,3}")) { Console.WriteLine("Syntax Error --> ([-]){2,3}"); input_equation(); }
+        if (Regex.IsMatch(input, pattern: @"([+]){2,3}")) { Console.WriteLine("Syntax Error --> ([+]){2,3}"); input_equation(); }
+        if (Regex.IsMatch(input, pattern: @"([/]){2,3}")) { Console.WriteLine("Syntax Error --> ([/]){2,3}"); input_equation(); }
+
+
         return input;
     }
 
-    private static void validate_structure(char[] input)
+    private static List<string> solve_equation(List<string> input)
     {
-        string input_string = "-x)(-";
-        Console.WriteLine(@"Regex[ '^)' ] : " + Regex.IsMatch(input_string, pattern: @"^\)+-*/|[-*=+/\(]$"));
-        //return input;
+        Console.WriteLine();
+        input.ForEach(Console.WriteLine);
+        Console.WriteLine();
+
+        int first_number;
+        int second_number;
+        int aux;
+
+        for (int i = 0; i < input.Count; i++)
+        {
+            if(input[i].Equals("-"))
+            {
+                first_number = Convert.ToInt32(input[i - 1]);
+                second_number = Convert.ToInt32(input[i + 1]);
+
+                aux = first_number - second_number;
+                input[i] = Convert.ToString(aux);
+                input[i + 1] = "";
+                input[i - 1] = "";
+
+                break;
+            }
+        }
+
+        Console.WriteLine();
+        input.ForEach(Console.Write);
+        Console.WriteLine();
+
+        return input;
     }
 }
